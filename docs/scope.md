@@ -1,0 +1,4 @@
+---
+id: scope
+title: Scope
+---

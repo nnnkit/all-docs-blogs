@@ -11,7 +11,7 @@ module.exports = {
       title: 'Swipe Files',
       logo: {
         alt: 'Swipe Files',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       links: [
         {
@@ -37,10 +37,6 @@ module.exports = {
             {
               label: 'Style Guide',
               to: 'docs/',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
             },
           ],
         },
@@ -81,7 +77,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
+          homePageId: 'introduction',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
@@ -89,9 +85,6 @@ module.exports = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
