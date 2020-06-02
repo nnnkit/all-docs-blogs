@@ -7,27 +7,25 @@ author_image_url: https://avatars2.githubusercontent.com/u/3122626?v=4
 tags: ['javascript', 'node']
 ---
 
-To understand lots of data types and data structure deeply we will try implement the `JSON` methods `stringify`
+To understand different data types and data structure deeply we will implement the `JSON.stringify` method.Let's list all the built-in data structure and data types in JavaScript.
 
-Let's list all the kinds of data JavaScript has
+- `number`
+- `string`
+- `boolean`
+- `undefined`
+- `null`
+- `Symbol`
+- `Object`
+- `Array`
+- `Date`
+- `function`
+- `Infinity`
+- `-Infinity`
+- `NaN`
 
-- number
-- string
-- boolean
-- undefined
-- null
-- Symbol
-- Object
-- Array
-- Date
-- function
-- Infinity
-- (-Infinity)
-- NaN
+If you want to dig deeper you can learn about all the above data types at [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures).
 
-Can learn about all the above data types at [mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
-
-To learn these things properly we will try to implement our version of `JSON.stringify`. Let's see how `JSON.stringify` method behaves with the above listed data types.
+To implement `JSON.stringify` we need to know how it behaves with different data types. So, let's list the output of this method with different values.
 
 ```js
 JSON.stringify(21); // "21"
@@ -46,61 +44,46 @@ JSON.stringify(-Infinity); // "null"
 JSON.stringify(NaN); // "null"
 ```
 
-Let's make function to check the value types.
+Looking at the output we can categorise the it in different group.
 
-```js
-const isUndefined = value => typeof value === 'undefined';
-// isFinate returns false if the argument is Infinity, NaN or undefined otherwise, true.
-const isInfinityOrNaN = value => isFinate(value);
-const isNaN = value => isNaN(value);
-const isNull = value => value === null;
-const isSymbol = value => typeof value === 'symbol';
-const isString = value => typeof value === 'string';
-const isString = value => typeof value === 'string';
-const isBoolean = value => typeof value === 'boolean';
-const isObject = value =>
-  Object.prototype.toString.call(obj) === '[object Object]';
-const isDate = value => value instanceof Date;
-const isFunction = value => value instanceof Function;
-```
-
-Values that return `"null"`
+Values that returns `"null"` are
 
 - `null`
 - `Infinity`
 - `-Infinity`
 - `NaN`
 
-```js
-function filterNull(input) {
-  return isNull(input) || isInfinity(input) || isNaN() ? 'null' : input;
-}
-```
-
-Values that returns `undefined`
+Values that returns `undefined` are
 
 - `undefined`
 - `Symbol`
 - `function`
 
+Values that returns other than `"null"` or `undefined`. These are the values we need to implement in our function to return appropiate output.
+
+- `number`
+- `string`
+- `boolean`
+- `object`
+- `array`
+- `date`
+
+We will make functions to check the different value types. It will accept a value and returns `true` if it's of same data type else returns `false`.
+
 ```js
-function filterUndefined(input) {
-  return isUndefined(input) || isSymbol(input) || isFunction()
-    ? undefined
-    : input;
-}
+const isUndefined = value => typeof value === 'undefined';
+// isFinate returns false if the argument is Infinity, NaN or undefined otherwise, true.
+const isInfinity = value => Number.isFinite(value);
+const isNull = value => value === null;
+const isSymbol = value => typeof value === 'symbol';
+const isString = value => typeof value === 'string';
+const isBoolean = value => typeof value === 'boolean';
+const isArray = value => Array.isArray(value);
+const isObject = value =>
+  Object.prototype.toString.call(value) === '[object Object]';
+const isDate = value => value instanceof Date;
+const isFunction = value => value instanceof Function;
 ```
-
-Values that are valid (for conversion)
-
-- number
-- string
-- boolean
-- Object
-- array
-- date
-
-Let's make function to determine the type of values.
 
 Let's take an example that we need stringify. We will try to have all different kinds of data so we can test our function thoroughly.
 
@@ -121,10 +104,16 @@ let obj = {
 };
 ```
 
-We will start implementing the funciton `stringifyJSON` by keeping in mind the input and output. We are going to have lots of condition so we will use `switch`
+```js
+function filterNull(value) {
+  return isNull;
+}
+```
+
+We will start implementing the funciton `stringify` by keeping in mind the input and output. We are going to have lots of condition so we will use `switch`
 
 ```js
-function stringifyJSON(input) {
+function stringify(input) {
   switch (true) {
     case isUndefined(input):
       return undefined;
@@ -134,17 +123,21 @@ function stringifyJSON(input) {
       return undefined;
     case isNull(input):
       return 'null';
+    case isInfinity(input):
+      return 'null';
+    case isNaN(input):
+      return 'null';
     case isString(input):
       return input;
     case isDate(input):
-      return Dtring(input);
+      return String(input);
     case isBoolean(input):
       return String(input);
     case isArray(input):
       return `[${input
         .reduce(
           (acc, val) =>
-            isUndefined(val) ? [...acc, 'null'] : [...acc, stringifyJSON(val)],
+            isUndefined(val) ? [...acc, 'null'] : [...acc, stringify(val)],
           []
         )
         .join(', ')}]`;
@@ -154,13 +147,14 @@ function stringifyJSON(input) {
           if (typeof input[key] === 'undefined') {
             return acc;
           } else {
-            return [
-              ...acc,
-              `${stringifyJSON(key)} : ${stringifyJSON(input[key])}`,
-            ];
+            return [...acc, `${stringify(key)} : ${stringify(input[key])}`];
           }
         }, [])
         .join(', ')}}`;
+    default:
+      throw new Error('Something went wrong!');
   }
 }
 ```
+
+We can compare the result of using `JSON.stringify` and our very own `stringify` method.
