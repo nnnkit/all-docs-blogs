@@ -37,6 +37,7 @@ JSON.stringify(Symbol('test')); // undefined
 JSON.stringify({ name: 'Arya' }); // "{"name":"Arya"}"
 JSON.stringify([1, 2, 3, 4]); // "[1,2,3,4]"
 JSON.stringify([1, 2, undefined, 4]); // "[1,2,null,4]"
+JSON.stringify([1, 2, undefined, 4]); // "[1,2,null,4]"
 JSON.stringify(new Date()); // ""2020-05-29T19:06:48.941Z""
 JSON.stringify(function () {}); // undefined
 JSON.stringify(Infinity); // "null"
@@ -49,8 +50,7 @@ Looking at the output we can categorise the it in different group.
 Values that returns `"null"` are
 
 - `null`
-- `Infinity`
-- `-Infinity`
+- `Infinity` and `-Infinity`
 - `NaN`
 
 Values that returns `undefined` are
@@ -67,6 +67,14 @@ Values that returns other than `"null"` or `undefined`. These are the values we 
 - `object`
 - `array`
 - `date`
+
+#### Few things to note
+
+- If you pass above values like `null`, `Infinity`, `NaN` as an individual value like `JSON.stringify(NaN)` it returns string data type `'null'`. But if the passed value is in array `JSON.stringify([NaN])` it returns `null` data type.
+
+- `JSON.stringify({sayHello: () => {}})` returns empty object `'{}'` but `JSON.stringify([function sayHello(){}])` returns `[null]`.
+
+> Inside array all these values `null`,`Infinity`,`Infinity`,`NaN`,`undefined`,`Symbol`,`function` return `null`.
 
 We will make functions to check the different value types. It will accept a value and returns `true` if it's of same data type else returns `false`.
 
@@ -104,6 +112,21 @@ let obj = {
 };
 ```
 
+This function will return `null` if the input is any of the six mentioned values or return input.
+
+```js
+function processValueInsideArray(input) {
+  return isNull(input) ||
+    isInfinity(input) ||
+    isNaN(input) ||
+    isUndefined(input) ||
+    isSymbol() ||
+    isFunction(input)
+    ? null
+    : input;
+}
+```
+
 ```js
 function filterNull(value) {
   return isNull;
@@ -130,14 +153,16 @@ function stringify(input) {
     case isString(input):
       return input;
     case isDate(input):
-      return String(input);
+      return new Date().toISOString();
     case isBoolean(input):
       return String(input);
     case isArray(input):
       return `[${input
         .reduce(
           (acc, val) =>
-            isUndefined(val) ? [...acc, 'null'] : [...acc, stringify(val)],
+            processValueInsideArray(val) === null
+              ? [...acc, null]
+              : [...acc, stringify(val)],
           []
         )
         .join(', ')}]`;

@@ -3,8 +3,6 @@ id: events
 title: Events
 ---
 
-# Events
-
 Event are actions like click, moving mouse, type performed by the user or the browser itself. These are some common events
 
 - User clicking on a button or other element `click`

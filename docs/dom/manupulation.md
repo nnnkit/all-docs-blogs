@@ -3,13 +3,13 @@ id: manupulation
 title: DOM Manupulation
 ---
 
-## Creating Node
+### Creating Node
 
 1. `createElement`
 2. `createTextNode`
 3. `createCommentNode`
 
-## Insertion
+### Insertion
 
 4. `append`
 5. `prepend`
@@ -21,19 +21,19 @@ title: DOM Manupulation
 11. `beforeend`
 12. `afterend`
 
-## Deletion
+### Deletion
 
 13. `remove`
 
-## Cloning a node
+### Cloning a node
 
 14. `cloneNode`
 
-## Optimized way of adding list
+### Optimized way of adding list
 
 15. `DocumentFragment`
 
-## Adding style
+### Adding style
 
 16. `className`
 
