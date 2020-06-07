@@ -115,11 +115,25 @@ We need to only update the value of count when we click on any of these buttons.
 
 We needs to change the value of count when you click on the button. To handle the click on the button we need to understand events in React. Event in React is similar to handeling event in pure HTML.
 
-Like if in HTML `<button onclick="handleClick()">Click me</button>` adds a event of type `click` on the element. When that happens `handleClick` will be called. Similarly in react you do something like `<button onClick={handleClick}>Click me</button>`.
+For xample in HTML
 
-- Events are named in camelCase like `onClick`, `onSubmit`, `onKeyDown` etc.
+```html
+<button onclick="handleClick()">Click me</button>
+```
+
+is a bit different in React
+
+```jsx
+<button onClick={handleClick}>Click me</button>
+```
+
+- Events are named in camelCase like `onClick`, `onSubmit`, `onKeyDown` etc rather than lowercase.
+- With JSX you pass a function as the event handler, rather than a string.
 - HTML event requires function call React event needs function reference (you don't call the function)
-- React element can respond to almost every event that HTML suppots.
+
+> `ondblclick` in React becomes `onDoubleClick`. You can get a list of all the events [here](https://reactjs.org/docs/events.html#supported-events)
+
+React element supports almost every event that HTML suppots.
 
 ```jsx
 class Counter extends React.Component {
@@ -205,8 +219,7 @@ class Counter extends React.Component {
     };
   }
   handleIncrement = () => {
-    // update state of count to 2
-    this.setState({ count: 2 });
+    this.setState({ count: this.state.count + 1 });
   };
   render() {
     return (
@@ -221,4 +234,49 @@ class Counter extends React.Component {
 }
 
 ReactDOM.render(<Counter />, document.getElementById('root'));
+```
+
+> When defining a function inside class use arrow function. We will learn about why later on.
+
+### More about events
+
+#### Synthetic Event
+
+When we pass a callback function to a event handeler we get access to the event object.
+
+```jsx
+function Link() {
+  function handleClick(e) {
+    // e is synthetic event.
+    // e.nativeEvent (browser native event object)
+  }
+  return <button onClick={handleClick}>Click Me!</button>;
+}
+```
+
+The event object `e` that you get in the callback function is a synthetic event not the browser native event object that you get while using events in DOM, you must be thinking why?
+
+- Synthetic event has preety much all the same property that you find in Native Event. You will not feel the difference.
+- React defines these synthetic events according to the W3C spec, so you don't have to worry about cross-browser compatibility.
+- React also does a lot of performance optimization for the event
+- To get access to the Native Event you can use `e.nativeEvent` (In most case you will not need it)
+
+#### Pass a parameter to event handlers
+
+It's common to pass some extra parameter to an event handler. For example along with event you also want to pass an object with name you can do like this.
+
+```jsx
+class Button extends React.Component {
+  handleClick(e, info) {
+    console.log('Name is: ', info.name);
+  }
+
+  render() {
+    return (
+      <button onClick={e => this.handleClick(e, { name: 'Arya' })}>
+        Click me
+      </button>
+    );
+  }
+}
 ```

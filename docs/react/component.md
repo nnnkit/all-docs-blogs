@@ -276,3 +276,44 @@ Along with name we can also use other informations like director, genre etc.
 What's happening with this is we are taking a list of movies and converting them in an user interface.
 
 After doing this if you look into the `console` you will see an error shying `Each child in a list should have a unique key prop`. It means, anytime you are rendering a list of react element you need to pass unique `key` props. It helps (internaly) React keep track of the elements in the list.
+
+### Inline styling using style props
+
+Let's take a look at inline styling HTML element.
+
+```html
+<h1 style="font-size: 24px; padding: 20px;">Hello World!</h1>
+```
+
+React element can also be inline styled.
+
+```jsx
+<h1 style={{ fontSize: '24px', padding: '20px' }}>Hello World!</h1>
+```
+
+The `style` prop of react element accepts an object and camelCased properties rather than a CSS string. This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
+
+#### Add className conditionaly
+
+You can add class names to a react component conditionaly using something like this.
+
+```jsx
+function Button(props) {
+  function getClassName(){
+    if(props.size === "large"){
+      return "btn large-btn"
+    } else if(props.size === "small"){
+      return "btn small-btn";
+    } else {
+      return "btn"
+    }
+    return "";
+  }
+
+  return <button className={getClassName()}>Click Me</button>;
+}
+
+<Button />
+<Button size="large" />
+<Button size="small" />
+```

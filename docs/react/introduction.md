@@ -505,4 +505,4 @@ The benefits of writing of JSX is that you can write JavaScript if you want. For
 
 Even writing the UI using createElement for complex UIs will be a challange so instead of this we want to write similar to how we write in HTML so using `babel` we can write in the structure similar to HTML. That is called `JSX`.
 
-### Keeping the UI in sync with the state is very hard.
+### Keeping the UI in sync with the state is hard.
