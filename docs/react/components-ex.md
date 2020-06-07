@@ -3,13 +3,15 @@ id: component-ex
 title: Exercise
 ---
 
-### 1. Thinking in components
+### Thinking in components
 
 Breakdown this layout into components. You can take a print out and do the marking of components using pen. Or you can also use any tool like canva or other. Submit the final link.
 
 ![document.createElement](/img/react/twitter-layout.jpg)
 
-### 2. Button Component using props
+### Create a card component
+
+### Button Component using props
 
 Button component will accept these props
 
@@ -47,7 +49,7 @@ Baisc Uses:
   <Button type="outlined" icon />
 ```
 
-### 3. Gizmo App (convert the layout into components)
+### Gizmo App (convert the layout into components)
 
 We will keep working on the Gizmo App (article component) and break down our layout into components. Convert the layout you created in last section into components. Follow the diagram given below.
 

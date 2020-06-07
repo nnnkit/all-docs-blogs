@@ -48,10 +48,13 @@ module.exports = {
       type: 'category',
       label: 'React',
       items: [
+        'react/prerequisite',
         'react/introduction',
         'react/hello-world',
         'react/component',
         'react/component-ex',
+        'react/state',
+        'react/lifecycle',
       ],
     },
   ],

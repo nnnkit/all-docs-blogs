@@ -1,0 +1,4 @@
+---
+id: proptypes
+title: PropTypes
+---
