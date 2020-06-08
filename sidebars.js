@@ -55,6 +55,16 @@ module.exports = {
         'react/component-ex',
         'react/state',
         'react/lifecycle',
+        'react/conditional-rendering',
+        {
+          type: 'category',
+          label: 'Advanced Concept',
+          items: [
+            'react/advanced/error-boundary',
+            'react/advanced/render-and-commit',
+            'react/advanced/terms',
+          ],
+        },
       ],
     },
   ],

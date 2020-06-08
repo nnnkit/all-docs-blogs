@@ -3,7 +3,9 @@ id: lifecycle
 title: Lifecycle In React
 ---
 
-Every component goes through phases, to understand this let me make a component.
+Lifecycle refers to the series of changes in the life of an organism. Like child, adult and old. Similarly react component also goes through series of change like mount, updating and unmount.
+
+To understand this let us use below component.
 
 ```jsx
 class Hello extends React.Component {
@@ -71,7 +73,7 @@ This method will be called as soon as the update UI is pushed to DOM.
 
 This method is invoke just before the component is going to be unmounted. This place is ideal from doing cleanups like removing event listener, cancelling network request or cleaning intervale etc.
 
-````js
+```js
 // add event listener or interval
 componentDidMount() {
   //addEventListener()
@@ -83,4 +85,4 @@ componentWillUnmount() {
   //removeEventListener()
   // clearInterval()
 }
-````
+```

@@ -4,12 +4,13 @@ title: Prerequisite For React
 ---
 
 - Arrow Function
-- `this` is regular function
+- `this` is regular function and in arrow function.
+- class
 - Statement vs Expression
 - String Interpolation
 - Mutatble and Immutable
-- let/const
-- Desructuring
-- Rest and spread operator
+- Desructuring (array and object)
 - Import and Export (Module)
+- Copy by reference and copy by value
+- `.` and `[]` to access object
 - Understanding Babel
