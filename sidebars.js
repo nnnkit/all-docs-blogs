@@ -56,6 +56,7 @@ module.exports = {
         'react/state',
         'react/lifecycle',
         'react/conditional-rendering',
+        'react/forms',
         {
           type: 'category',
           label: 'Advanced Concept',
