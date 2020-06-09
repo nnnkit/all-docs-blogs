@@ -128,3 +128,87 @@ class FlavorForm extends React.Component {
   }
 }
 ```
+
+## Handeling Multiple Elements
+
+```jsx
+class UserLogIn extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+    };
+  }
+  handleChange = event => {
+    let { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+  render() {
+    return (
+      <form>
+        <label htmlFor="email">Username</label>
+        <input
+          type="text"
+          id="email"
+          name="username"
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
+        <label htmlFor="email">Password</label>
+        <input
+          type="email"
+          id="email"
+          name="password"
+          value={this.state.password}
+          onChange={this.handleChange}
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+```
+
+In above example we are add `name` property to both the input element. Using the name property of different forms we are updating the state. When state is changing the component is re-rendering and the value of the form is updating.
+
+### file input
+
+Input type file `<input type="file" />` let's you choose one or multiple files from you system to be uploaded. You can't set the value of if programmatically like we were doing in other element using `value` attributes. This is for security reasons.
+
+You cannot set the value of a file picker from a script — doing something like the following has no effect:
+
+```js
+const input = document.querySelector('input[type=file]');
+input.value = 'foo';
+```
+
+So, if we can't se the value of an element we can't make it controlled component. For these situations we use something called as Uncontrolled component (you can't control the value of input programmatically).
+
+In these situations we use something called as `ref` and store the value in an special box created using `createRef`.
+
+1. `createRef` creates a box and initializes with an object `{current: undefined}`.
+2. When you do `ref={this.fileInput}` the DOM object of the input element is put into `{current: input}`. Similar to how you select an element using `querySelector` in DOM.
+
+```jsx
+class FileInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.fileInput = React.createRef();
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    alert(this.fileInput.current.files[0].name);
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <input type="file" ref={this.fileInput} />
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+```
