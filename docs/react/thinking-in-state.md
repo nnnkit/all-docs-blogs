@@ -58,3 +58,5 @@ function Counter(props) {
   return <h1>{props.count}</h1>;
 }
 ```
+
+> Whenever you can try making component stateless. Component without state is much easier to mange. Define state only if you have to.

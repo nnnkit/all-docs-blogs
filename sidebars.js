@@ -54,6 +54,7 @@ module.exports = {
         'react/component',
         'react/component-ex',
         'react/state',
+        'react/state-ex',
         'react/lifecycle',
         'react/conditional-rendering',
         'react/forms',

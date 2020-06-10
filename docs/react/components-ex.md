@@ -9,8 +9,6 @@ Breakdown this layout into components. You can take a print out and do the marki
 
 ![document.createElement](/img/react/twitter-layout.jpg)
 
-### Create a card component
-
 ### Button Component using props
 
 Button component will accept these props
