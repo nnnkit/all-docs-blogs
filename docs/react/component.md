@@ -79,6 +79,8 @@ Components are reusable piece of code but you can't reused it if you can't chang
 
 A component is a function so it can accept parameter. So you can pass parameter to your component like `Hello({name: "Arya"})`. To make it resemble like HTML in JSX we write like `<Hello name="Arya" />`. You can pass multiple parameter. In react all these parameter is called **props**.
 
+> Props are read only. You can't update the props you can only read the value of props.
+
 ```jsx
 function hello({ name }) {
   return <h1>Hello {name}</h1>;

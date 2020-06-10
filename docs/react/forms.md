@@ -14,13 +14,18 @@ Sample form:
 </form>
 ```
 
-Handeling a form is one of the most common part of making any application or web pages. There are different ways of handeling forms in React we will learn about two ways of doing that 1. Controlled Component 2. Uncontrolled Component.
+Handeling a form is one of the most common part of making any application or web pages. There are different ways of handeling forms in React we will learn about two ways of doing that:
+
+1. Controlled Component (control the state of element using react state)
+2. Uncontrolled Component (traditional HTML form use `ref` to get the value)
 
 ## Controlled Component
 
 In HTML elements like `input`, `textarea`, and `select` maintains their own state and update it based on user input. Like think about an input element you type something and you can see what you are typing in the field. In React application we can have our own state. We can put the value of the input in component `state` and when state changes using `setState` it will re-render. In that way you can control the input of the form.
 
-Controlled component is when you controls the state of an d`input`, `textarea` or `select` using the react's state.
+Controlled component is when you controls the state of an d`input`, `textarea` or `select` using the react's state. As the value changes in input you save the value in react state.
+
+In this way of handeling forms component can respond to the input immediately like for validation, disabiling the button unless all fields are valid etc.
 
 ```jsx
 class FormInput extends React.Component {

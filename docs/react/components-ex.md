@@ -30,8 +30,6 @@ Basic Informations:
 
 ![document.createElement](/img/react/button-props.png)
 
-The repo is present at https://codesandbox.io/s/button-component-h0obk
-
 Baisc Uses:
 
 ```jsx
