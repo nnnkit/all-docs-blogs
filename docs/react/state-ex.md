@@ -30,3 +30,17 @@ Create a page that has sidebar and main body.
 - When clicked on that the sidebar will be visible
 
 ![Counter](/img/react/sidebar.png)
+
+### Accordian
+
+Create an accordian component.
+
+- There can be multiple accordian
+- Each accordian will accept three prop `title`, `text` an `isOpen`
+- `isOpen` can either be `true` or `false`
+- When `isOpen` is true the component will be in open state.
+- The component can be in two state `open` or `closed` based on `isOpen` prop.
+- If the component is closed the icons on right hand side will point `downward` in open `upward` (You can use any other symbol or text to show that)
+- If the accordian is closed the `text` property will not be visible.
+
+![Counter](/img/react/accordian.png)
