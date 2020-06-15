@@ -5,13 +5,13 @@ title: Value
 
 ## What is Value
 
-The most fundamental unit of information in programming is called value or data. It can be any piece of information like your name or age.
+The most fundamental unit of information in any programming language is called value or data. It can be any piece of information that you can store and manupulate like your name or age.
 
 For example
 
 `name` can be `"Arya"` or `age` can be `23`.
 
-`"Arya"` and `23` in programming terms are called values.
+`"Arya"` and `23` in programming terms are called **values**.
 
 You can have different kind of values: a letter, word, paragraph, number etc. These values are divided into different types also know as `Data Types` or you can call it `Value Types`. All the values have to be one of the following types.
 
@@ -80,11 +80,11 @@ Any representation of text is `string` data type in JavaScript.
 Example:
 
 ```js
-'a'; // letter
-'A'; // uppercase letter
-'Hello'; // word
-'Hello World!'; // single quote
-'JavaScript is a single threaded language!'; // paragraph
+"a"; // letter
+"A"; // uppercase letter
+"Hello"; // word
+"Hello World!"; // single quote
+"JavaScript is a single threaded language!"; // paragraph
 ```
 
 **Visual Impression to identify string:** Anything wrapped in `''` , `""` or `backticks` is a string.
@@ -117,9 +117,9 @@ Object is a collection of `key` and `value` pairs seperated by comma `,`. Where 
 
 ```js
 var user = {
-  name: 'Arya',
+  name: "Arya",
   age: 21,
-  house: 'Stark',
+  house: "Stark",
   isAdult: true,
 };
 ```
@@ -132,7 +132,7 @@ To check the data type of any value we use `typeof` operator. It always returns 
 
 ```js
 typeof 21; // "number"
-typeof 'Hello'; // "string"
+typeof "Hello"; // "string"
 typeof true; // "boolean"
 typeof undefined; // "undefined"
 typeof null; // "object" 🔥Boop

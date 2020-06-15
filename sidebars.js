@@ -2,48 +2,28 @@ module.exports = {
   docs: [
     {
       type: "category",
-      label: "JS Fundamental",
+      label: "Fundamental",
       items: [
-        "fundamental/main123",
-        "introduction",
-        "hello-world",
-        {
-          "Store Of Value": [
-            "value",
-            "variable",
-            "type-conversion",
-            "operators",
-            "expression-and-statement",
-          ],
-        },
-        "condition-and-loops",
-        "function",
-        {
-          "Data Structure": [
-            "object",
-            "array",
-            "value-vs-reference",
-            "garbage-collection",
-          ],
-        },
+        "intro",
+        "javascript/fundamental/hello-world",
+        "javascript/fundamental/value",
+        "javascript/fundamental/variable",
+        "javascript/fundamental/alert-prompt",
+        "javascript/fundamental/operators",
       ],
     },
     {
       type: "category",
       label: "DOM",
       items: [
-        "dom/browser-env",
-        "dom/dom",
-        "dom/selecting-element",
-        "dom/manupulation",
-        "dom/events",
+        "javascript/dom/browser-env",
+        "javascript/dom/dom",
+        "javascript/dom/selecting-element",
+        "javascript/dom/manupulation",
+        "javascript/dom/events",
       ],
     },
-    {
-      type: "category",
-      label: "Debugging",
-      items: ["console", "style-guide", "fixing-issue", "testing"],
-    },
+
     {
       type: "category",
       label: "React",

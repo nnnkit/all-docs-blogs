@@ -12,7 +12,7 @@ Variable is a named storage that is used to store any value. You can imagine a v
 Example:
 
 ```js
-var username = 'Arya';
+var username = "Arya";
 ```
 
 In the above code we are using multiple things let's understand all of those.
@@ -32,8 +32,8 @@ In the above code we are using multiple things let's understand all of those.
 You can also change the value of a variable using `=` (assignment operator) like below
 
 ```js
-var username = 'Arya';
-username = 'John';
+var username = "Arya";
+username = "John";
 ```
 
 The value of the `"Arya"` will be replaced with `"John"` this is called re-assignment.
@@ -45,9 +45,9 @@ variable can only hold one value at a time.
 There are multiple ways of creating a box (variable) in JavaScript i.e `var` , `let`, `const`
 
 ```js
-var username = 'Arya';
-let house = 'Stark';
-const brother = 'John';
+var username = "Arya";
+let house = "Stark";
+const brother = "John";
 ```
 
 You can create boxes using multiple ways but all the boxes behaves differently.
