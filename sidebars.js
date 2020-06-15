@@ -54,10 +54,10 @@ module.exports = {
         "react/component",
         "react/component-ex",
         "react/state",
+        "react/conditional-rendering",
         "react/state-ex",
         "react/lifecycle",
         "react/lifecycle-ex",
-        "react/conditional-rendering",
         "react/forms",
         {
           type: "category",
