@@ -3,7 +3,7 @@ id: hello-world
 title: Hello World!
 ---
 
-While learning programming language we need to know how to run the code that we will write? To execute we need environment that understands the language we are learning. Best thing about JS is browsers can understand it so we will use that to execute the code.
+While learning any programming language we need to know how to run the code that we will write? To execute we need environment that understands the language we are learning. Best thing about JS is browsers can understand it so we will use that to execute the code.
 
 Let's start by writing our first JavaScript program to show `Hello World!`.
 
@@ -15,7 +15,7 @@ To write our first program:
 - To show `Hello World` in browser we will use a special command provided by browser called `alert`.
 - You also need to pass any message for alert to show like in this case it's `Hello World!`.
 
-```html {6-8} title="index.html"
+```html {6-8} title="index.html" live
 <html>
   <head>
     <title>Hello World!</title>
@@ -48,6 +48,8 @@ alert("Hello World!");
 ```
 
 > Browser optimizes the external files by caching it.
+
+# Exercises
 
 ## JavaScript in HTML file
 

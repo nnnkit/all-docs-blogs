@@ -1,7 +1,7 @@
 module.exports = {
   title: "Swipe Files",
   tagline: "Collection of docs and articles the I work on.",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://acreact.netlify.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
