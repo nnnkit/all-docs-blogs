@@ -8,6 +8,7 @@ module.exports = {
         "javascript/fundamental/hello-world",
         "javascript/fundamental/value",
         "javascript/fundamental/variable",
+        "javascript/fundamental/type-conversion",
         "javascript/fundamental/alert-prompt",
         "javascript/fundamental/operators",
       ],

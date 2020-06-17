@@ -205,7 +205,7 @@ let lastName = "Stark";
 - Assign your name as the value of `name`.
 - Reassign the value `newUser` to `name`.
 - Set the value of `isAdmin` to `true`.
-- Prompt the values of all the three variables.
+- Alert the values of all the three variables.
 
 #### Assignment and re-assignment
 

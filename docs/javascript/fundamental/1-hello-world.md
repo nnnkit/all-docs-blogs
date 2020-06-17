@@ -49,6 +49,18 @@ alert("Hello World!");
 
 > Browser optimizes the external files by caching it.
 
+### Developer console
+
+Now we can execute JavaScript using `script` tag in `html` file. What if I tell you this is not the simplest way of testing any JavaSctipt code.
+
+You can also use the `console` tab in developer tools of any browser. Like I am using `Chrome Browser` in that you can right click on any page and click on `inspect` in the opened panel you can see `console`. You can type JavaScript code and it will be executed. Try the code below.
+
+```js
+alert("Hello World!");
+```
+
+![Table](/img/value/dev-tools.png)
+
 # Exercises
 
 ## JavaScript in HTML file
