@@ -10,7 +10,16 @@ module.exports = {
         "javascript/fundamental/variable",
         "javascript/fundamental/type-conversion",
         "javascript/fundamental/alert-prompt",
-        "javascript/fundamental/operators",
+        {
+          type: "category",
+          label: "Operators",
+          items: [
+            "javascript/fundamental/operators/basic-operators",
+            "javascript/fundamental/operators/logical-operators",
+            "javascript/fundamental/operators/comparison-operators",
+            "javascript/fundamental/operators/conditional-operators",
+          ],
+        },
       ],
     },
     {
