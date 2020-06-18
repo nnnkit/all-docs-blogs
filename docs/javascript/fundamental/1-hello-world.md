@@ -3,7 +3,7 @@ id: hello-world
 title: Hello World!
 ---
 
-While learning any programming language we need to know how to run the code that we will write? To execute we need environment that understands the language we are learning. Best thing about JS is browsers can understand it so we will use that to execute the code.
+While learning any programming language we need to know how to run the code that we write? To execute we need environment that understands the language we are learning. Best thing about JS is browsers can understand it so we will use that to execute the code.
 
 Let's start by writing our first JavaScript program to show `Hello World!`.
 
