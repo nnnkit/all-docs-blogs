@@ -9,7 +9,7 @@ All computer programs are composed of value and operations on that value. Value 
 
 `1`, `a` or `AltCampus` in programming terms are called **values**.
 
-Looking at above examples we can see there are different kind of values: a number, a letter, word etc. Based on the nature of data, values are divided into different types also known as `Data Types`.
+Looking at the above examples, we can see there are different kind of values: a number, a letter, a word etc. Based on the nature of data, values are divided into different types, also known as `Data Types`.
 
 All the value in JavaScript needs to be of a certain type like number, string etc.
 
@@ -28,8 +28,8 @@ Below is the list of all possible data types in JavaScript.
 
 - All numeric values are of `number` data type in JavaScript.
 - It represents both integer and floating point numbers.
-- You can perform operations like addition, substraction, multiplication, division etc using operators on this data type.
-- Along with regular numbers there are some special numbers like `Infinity`, `-Infinity` and `NaN` also belong to this data type.
+- You can perform operations like addition, subtraction, multiplication, division etc using operators on this data type.
+- Along with regular numbers, there are some special numbers like `Infinity`, `-Infinity` and `NaN` also belong to this data type.
 
 ```js
 133,
@@ -49,13 +49,13 @@ Numbers can be manipulated using arithmetic operations like addition, multiplica
 20 + 10 * 11; // 130
 ```
 
-Symbols like (`+`, `-`, `*`) used above are called Operators. Putting the operator between two values will return a new value. Like in above example using the `+` operator on numbers 24 and 21 returns 45.
+Symbols like (`+`, `-`, `*`) used above are called Operators. Putting the operator between two values will return a new value. Like in above example, using the `+` operator on numbers 24 and 21 returns 45.
 
 ---
 
 #### BigInt
 
-Used to represent any number bigger than the upper limit (9007199254740991) or smaller than lower limit (-9007199254740991). For BigInt you need to add `n` at the end of the value. This is rarely needed.
+BigInt is used to represent any number bigger than the upper limit (9007199254740991) or smaller than the lower limit (-9007199254740991). For BigInt, you need to add `n` at the end of the value. This is rarely needed.
 
 ```js
 const bigInt = 1234567890123456789012345678901234567890n;
@@ -76,7 +76,7 @@ There are three ways to define string in JavaScript:
 Example:
 
 ```js
-"a"; // letter
+"a"; // lowercase letter
 "A"; // uppercase letter
 "Hello"; // word
 "Hello World!"; // single quote
@@ -85,13 +85,13 @@ Example:
 
 There is no difference between `single` and `double` quote in JavaScript. You can choose any but don't mix them.
 
-**Template literals** are enclosed by backticks (`` ` ` ``). It allows us to mix expressions like (1 + 21) into string. If you want to write `1 + 1 is equal to 2`
+**Template literals** are enclosed by backticks `` ` ` ``. It allows us to mix expressions like (1 + 21) into string. If you want to write `1 + 1 is equal to 2`
 
 ```js
 alert(`1 + 1 is equal to ${1 + 1}`);
 ```
 
-Above code is only possible using template literal not other single or double quote.
+Above code is only possible using template literals. We cannot write the above code using single or double quote.
 
 :::tip Visual Impression to identify string:
 Anything wrapped in `single quote` , `double quote` or `backticks` is a string.
@@ -99,14 +99,14 @@ Anything wrapped in `single quote` , `double quote` or `backticks` is a string.
 
 - `"21"` is a string not a number
 - `"true"` is a string not a boolean
-- `"100.21"` is a string not a boolean
+- `"100.21"` is a string not a number
 
-You can do some operation on string like joining two strings using `+` operator. We will learn about `+` operator deeply in Operators.
+You can do some operations on string like joining two strings using `+` operator. We will learn about `+` operator deeply in Operators.
 
 ```js
-"Arya" + "Stark"; // AryaStark
-"Arya" + " " + "Stark"; // Arya Stark
-"Hello" + " " + "World" + "!"; // Hello World!
+"Arya" + "Stark"; // "AryaStark"
+"Arya" + " " + "Stark"; // "Arya Stark"
+"Hello" + " " + "World" + "!"; // "Hello World!"
 ```
 
 :::tip Multi-line string
@@ -131,11 +131,11 @@ line two!`);
 
 To differentiate between only two possible values like `day` or `night` , `yes` or `no` , `on` or `off` we use boolean data type in JavaScript that has only two values: `true` or `false`.
 
-- `true` can represent values like `on` or `yes`
+- `true` represents values like `on` or `yes`
 
 - `false` represents values like `off` or `no`
 
-When you compare two values you get boolean types as a result. For comparision we can use operators like `>`, `<` etc.
+When you compare two values, you get boolean types as a result. For comparision we can use operators like `>`, `<` etc.
 
 ```js
 21 > 22; // false
@@ -143,7 +143,7 @@ When you compare two values you get boolean types as a result. For comparision w
 ```
 
 :::danger JavaScript is case sensitive
-JavaScript is a case sensitive language. `true` and `True` is not same.
+JavaScript is a case sensitive language. `true` and `True` are not same.
 :::
 
 ---
@@ -161,7 +161,7 @@ There is no fundamental difference between `null` or `undefined`. In most of the
 
 #### Object
 
-Object is fundamentally different from all other types defined above. It is used to store complex information. Object is a collection of `key` and `value` pairs seperated by comma `,`. Where key is always a `string`, and `value` can be any data type like number, boolean, string, null, undefined, symbol or object. Objects are used to store complex data structure.
+Object is fundamentally different from all other types defined above. It is used to store complex information. Object is a collection of `key` and `value` pairs seperated by comma `,`, where key is always a `string`, and `value` can be any data type like number, boolean, string, null, undefined, symbol or object. Objects are used to store complex data structure.
 
 ```js
 {
@@ -174,7 +174,7 @@ Object is fundamentally different from all other types defined above. It is used
 
 - Above object has 4 `key` & `value` pairs
 - `name`, `age`, `house` and `isAdult` are the `keys`
-- `"Arya"`, `21`, `"Stark"` The data after `:` are `values`.
+- `"Arya"`, `21`, `"Stark"` and `true` The data after `:` are `values`.
 
 ---
 
@@ -184,11 +184,11 @@ The symbol type is used to create unique identifiers. You will not need it in ba
 
 ### Different category of values
 
-All the data types explained above can be categorised in two different types. To understand this we should know that computers at core is a very simple device and can only store simple pieces of information. All complex information (non primitive) are built up from the basic data types (primitive).
+All the data types explained above can be categorised in two different types. To understand this, we should know that computers at core is a very simple device and can only store simple pieces of informations. All complex informations (non- primitive) are built up from the basic data types (primitive).
 
 #### 1. Primitive Data Type:
 
-Primitive data type are basic type or fundamental piece of information provided by programming language as a building block of values like number, text etc.
+Primitive data type are basic data types or fundamental piece of information provided by programming language as a building block of values like number, text etc.
 
 - Primitive Data Types are immutable (can't be changed) by nature.
 - Primitive values can contain only one value at a time.
@@ -205,20 +205,20 @@ Primitive data type are basic type or fundamental piece of information provided 
 
 #### 2. Non-Primitive Data Type:
 
-Primitive data types can take care of simple values but what about handeling complex information. For that programming language also give support handeling complex information also knows as **non-primitive** data types. These kind of data types are built using primitive data type so at the core they all are simple information. The only non-primitive data type in JavaScript is `Object`.
+Primitive data types can take care of simple values but what about handeling complex information. For that, programming language also give support for handling complex information, also knows as **non-primitive** data types. These kind of data types are built using primitive data types. So, at the core they all are simple information. The only non-primitive data type in JavaScript is `Object`.
 
 There are different variations of Object in JavaScript i.e function, array etc. We will learn about this topic later on.
 
 - Non-primitive data types are mutatble(can be changed) by nature.
-- Non-primitive can hold more than one value at time. Collection on name is an example.
+- Non-primitive can hold more than one value at a time. Collection of name is an example.
+- List of name `['John','Arya']` is an example of complex information.
 - Everything that is not primitive is an `object` in JavaScript.
-- List of name `['John','Arya']` is an example of complext information.
 
 ---
 
 ### The `typeof` operator
 
-`typeof` operator is used to check the data type of any value. It helps you check for the purpose of type checking. The return value of `typeof` operator is wrapped into double quote making it string data type.
+`typeof` operator is used to check the data type of any value. It helps you check for the purpose of type checking. The return value of `typeof` operator is wrapped into double quote making it a string data type.
 
 ```js
 typeof 21; // "number"
@@ -229,7 +229,7 @@ typeof null; // "object" 🔥Boop
 ```
 
 :::danger typeof null
-`typeof null` returns `"object"` is a bug in JavaScript. It can't be fixed ever because there are lots of website depends on this error.
+`typeof null` returns `"object"`, which is a bug in JavaScript. It can't be fixed ever because there are lots of website depending on this error.
 :::
 
 ### Exercise
@@ -240,12 +240,12 @@ typeof null; // "object" 🔥Boop
 
 - Write 5 values of number data type.
 - Write 5 values of string data type.
-- What are the possible values in boolean data type.
-- How will you represent `on` and `off` in boolen values.
-- What is the difference between number and BigInt
-- What are some special number values.
-- Which operator helps you in type-checking. Finding the data type of any value.
-- How many values are possible in `null` and `undefined` data types.
+- What are the possible values in boolean data type?
+- How will you represent `on` and `off` in boolean values?
+- What is the difference between number and BigInt?
+- What are some special number values?
+- Which operator helps you in type-checking i.e. in finding the data type of any value?
+- How many value/values are possible in `null` and `undefined` data types?
 - What is the difference between `null` and `undefined`
 - Define an object with `key` as username and value will be your name.
 - What is the difference between `primitive` and `non-primitive` values. Explain with example
