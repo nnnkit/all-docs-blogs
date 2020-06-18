@@ -51,6 +51,8 @@ for (let i = 0; i < 5; i = i + 1) {
 
 - step (`i = i + 1`): executes after the body on each execution
 
+> Initialization and step is optional is for loop. But you will have to use `;` to seperate. `for(;i < 5;){}`
+
 ### Break for loop on specific condition
 
 If you want to break the loop on specific condition you can use `break` statement.
@@ -129,4 +131,26 @@ for (let num = 2; num <= 10; num = num + 2) {
 }
 ```
 
-- To choose the right loop for your problems
+### How to pick the right loop
+
+- `while` loops in general are meant to have an indefinite number of iteration. Like if you are taking input from user. When the only thing you have is condition ise this loop.
+
+- `for` loop should have more definite number of iteration. Like loop from 1-10. When you know the initial and end values use this loop.
+
+- `for` loop has better readability. While using `for` loop you can understand on one line the starting, ending and step of the loop. In the example below you can see the difference. In `while` loop initialization and step is not readable.
+
+```js
+// WRONG
+let num = 2;
+while (num <= 10) {
+  console.log(num);
+  num = num + 2;
+}
+```
+
+```js
+// RIGHT
+for (let num = 2; num <= 10; num = num + 2) {
+  console.log(num);
+}
+```
