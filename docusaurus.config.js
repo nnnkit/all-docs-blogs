@@ -22,7 +22,7 @@ module.exports = {
         },
         { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/nnnkit/all-docs-blogs",
           label: "GitHub",
           position: "right",
         },
@@ -80,8 +80,7 @@ module.exports = {
           homePageId: "intro",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/",
+          editUrl: "https://github.com/nnnkit/all-docs-blogs/edit/master",
         },
         blog: {
           showReadingTime: true,

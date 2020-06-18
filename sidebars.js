@@ -20,6 +20,9 @@ module.exports = {
             "javascript/fundamental/operators/operators-ex",
           ],
         },
+        "javascript/fundamental/condition",
+        "javascript/fundamental/loops",
+        "javascript/fundamental/expression-and-statement",
       ],
     },
     {
