@@ -115,6 +115,18 @@ do {
 
 2. One of the common mistake while writing `while` or `do..while` loop is that we forget to increment the value, so it create an infinite loop. In the example below you can see that the variable (`num`) on which condition is checked is updated(`num = num + 2;`) inside that loop.
 
+Example of infinite loop:
+
+In the code below we are not changing the value of `i` after iteration. The value of `x` will remain at `0`. So the condition will always return `true` making this loop to be an infinite (never ending) loop.
+
+```js
+// Infinite loop
+let x = 0;
+while (x < 10) {
+  console.log(x);
+}
+```
+
 ```js {4}
 let num = 2; // initialization
 while (num <= 10) {
