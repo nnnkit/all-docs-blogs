@@ -145,3 +145,42 @@ NaN == 0; //false
 NaN == ""; //false
 NaN == false; //false
 ```
+
+## Exercise:
+
+---
+
+### Double and Tripal equal
+
+```js
+var a = 5,
+  b = 10,
+  c = "5";
+var x = a;
+```
+
+What will be the output of the code below on the basis of above code.
+
+```js
+a == c; // output
+a === c; // output
+a == x; // output
+a != b; // output
+a > b; // output
+a < b; // output
+a >= b; // output
+a <= b; // output
+a >= c; // output
+a <= c; // output
+```
+
+### Find th output of the given code below
+
+```js
+true == 0; // output
+true == 1; // output
+true == 2; // output
+true == 3; // output
+true == 100; // output
+true == 1000; // output
+```

@@ -17,7 +17,7 @@ module.exports = {
             "javascript/fundamental/operators/basic-operators",
             "javascript/fundamental/operators/logical-operators",
             "javascript/fundamental/operators/comparison-operators",
-            "javascript/fundamental/operators/conditional-operators",
+            "javascript/fundamental/operators/operators-ex",
           ],
         },
       ],

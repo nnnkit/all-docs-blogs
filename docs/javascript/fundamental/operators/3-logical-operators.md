@@ -115,7 +115,7 @@ Examples:
 NOT operator does the following:
 
 - Converts the value into boolean if the value is not `true/false`
-- Returns the inverse of the value got in above step.
+- Returns the inverse of the value got in above step. (`true` => `false`, `false` => `true`)
 
 ```js
 !false; // true
@@ -126,3 +126,37 @@ NOT operator does the following:
 - `false` is a boolean will return the inverse i.e `true`
 - `0` is falsy so it will return the inverse i.e `true`
 - `21` is truthy so it will return the inverse i.e `false`
+
+## Exercise:
+
+#### Output of the following line of code.
+
+```js
+"NaN" && "undefined" && 0; // output
+"AT" && "" && false; // output
+"AT" && " " && false; // output
+"AT" || 5; // output
+" " || "AT" || false; // output
+!{}; //output
+!""; //output
+!"OK"; //output
+!false; //output
+!true; //output
+```
+
+### Read code and find the output
+
+```js
+var a = 5,
+  b = 10;
+```
+
+After going through the code above find the output of the give code below.
+
+```js
+a != b && a < b; //output
+a > b || a == b; //output
+a < b || a == b; //output
+!(a < b); //output
+!(a > b); //output
+```

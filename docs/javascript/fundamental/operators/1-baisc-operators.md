@@ -181,7 +181,34 @@ let sum = (2 + 4, 3 + 4); // 7
 
 The value of `num` in above example will be 3. Comma operator will evaluate all the value separated by comma and returns the last value.
 
-### Comparision Operator
+## Exercise:
+
+### What's the output of the following, write the output next to the code as comment
+
+1. `5 * "5"` = ?
+2. `6 + "7"` = ?
+3. `1 + "JS"` = ?
+4. `1 * "JS"` = ?
+5. `5 + true` = ?
+6. `6 - true` = ?
+7. `7 - false` = ?
+8. `8 + false` = ?
+9. `true + true` = ?
+10. `true + false` = ?
+
+### Output of each line of code :
+
+- `3 * '8'`
+- `1 + '21' + 32`
+- `"string" ? 4 : 1`
+- `undefined ? 4 : 1`
+- `4 * Number("")`
+- `4 * 0`
+- `4 / '2'`
+- `4 + true`
+- `3 * false`
+- `3 * ""`
+- `3 + ""`
 
 [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 [Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
