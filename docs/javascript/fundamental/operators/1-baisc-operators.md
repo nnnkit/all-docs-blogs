@@ -5,12 +5,12 @@ title: Basic Operators
 
 ## Operators
 
-Operators are used for operations like assignment, comparing, arithmetic, logical etc. For example operator `+` for addition, `-` for substraction, `*` for multiplication, `=` for assignment and so on. Operand is what operators are applied to. For example: `5 + 6` has two operands, 5 and 6.
+Operators are used for operations like assignment, comparision, arithmetic, logical etc. For example, operator `+` for addition, `-` for substraction, `*` for multiplication, `=` for assignment and so on. Operand is what operators are applied to. For example: `5 + 6` has two operands, 5 and 6.
 
-Based on the number of operand a operator is applied on there are two types of operators `unary` and `binary`.
+Based on the number of operand an operator is applied on there are two types of operators `unary` and `binary`.
 
-- **Unary** operators act on one operand
-- **Binary** acts on two operand
+- **Unary** operator acts on one operand
+- **Binary** operator acts on two operand
 
 1. Unary operator: applies on one operand
 
@@ -43,10 +43,10 @@ var z = x + y; // binary
 
 ### Arithemetic (Math) Operators
 
-These are the following math operators that is supported in JavaScript:
+These are the following math operators that are supported in JavaScript:
 
 - Addition `+`
-- Substraction `-`
+- Subtraction `-`
 - Multiplication `*`
 - Division `/`
 - Remainder `%`
@@ -56,14 +56,14 @@ The operators `+`, `-`, `*`, `/` works exactly how it works in maths.
 
 #### Remainder `%`
 
-The result of remainder operator `a % b` is the remainder of a by b.
+The result of remainder operator `a % b` is the remainder of a divided by b (a/b).
 
 ```js
 let remainder = 10 % 3; // returns 1
 alert(43 % 2); // returns 1
 ```
 
-In above example the remainder of `10` divisible by `3` returns `1`.
+In the above example the remainder of `10` divisible by `3` returns `1`.
 
 > It looks like percentage but does not behave like that.
 
@@ -81,21 +81,21 @@ The exponentiation operator `3 ** 4` multiplies `3` by itself `4` times like `3 
 
 ### Assignment operators
 
-Assignment operators is used for assigning a value to it's left hand operand. Simplest example would be `=` which assigns a value to the left hand operand. `x = y`. The `=` operator assigns the valus of `y` (right operant) to the `x` (left operand). Below is the list of some of the most used assignment operators in JavaScript.
+Assignment operators are used for assigning a value to it's left hand operand. Simplest example would be `=` which assigns a value to the left hand operand. `x = y`. The `=` operator assigns the value of `y` (right operand) to the `x` (left operand). Below is the list of some of the most used assignment operators in JavaScript.
 
 | Name                      | Example      | Shorthand | Meaning                                  |
 | ------------------------- | ------------ | --------- | ---------------------------------------- |
 | Assignment Operator       | `x = 21`     | `x = 21`  | 21 is assigned to `x`                    |
 | Addition Assignment       | `x = x + 5`  | `x += 5`  | result of `x + 5` is assigned to x       |
-| Substraction Assignment   | `x = x - 5`  | `x -= 5`  | result of `x - 5` is assigned to x       |
-| Multiplication Assignment | `x = x * 5`  | `x *= 5`  | result of `x * 5` to x is assigned to x  |
-| Division Assignment       | `x = x / 5`  | `x /= 5`  | result of `x / 5` to x is assigned to x  |
-| Remainder Assignment      | `x = x % 5`  | `x %= 5`  | result of `x % 5` to x is assigned to x  |
-| Exponential Assignment    | `x = x ** 5` | `x **= 5` | result of `x ** 5` to x is assigned to x |
+| Subtraction Assignment    | `x = x - 5`  | `x -= 5`  | result of `x - 5` is assigned to x       |
+| Multiplication Assignment | `x = x * 5`  | `x *= 5`  | result of `x * 5` is assigned to x       |
+| Division Assignment       | `x = x / 5`  | `x /= 5`  | result of `x / 5` is assigned to x       |
+| Remainder Assignment      | `x = x % 5`  | `x %= 5`  | result of `x % 5` is assigned to x       |
+| Exponential Assignment    | `x = x ** 5` | `x **= 5` | result of `x ** 5` is assigned to x      |
 
 ### Unary and binary +
 
-The `+` operator exists in two forms _unary_ and _binary._ It can be applied to one or two operand.
+The `+` operator exists in two forms _unary_ and _binary._ It can either be applied to one operand or to two operands.
 
 When applied to one operand it converts the operand into a number.
 
@@ -106,7 +106,7 @@ When applied to one operand it converts the operand into a number.
 +""; // 0 (converted string to number)
 ```
 
-When applied on two operand it does one of the following:
+When applied on two operands it does one of the following:
 
 - If both operands are `number` data type, it will add both numbers and return the final number.
 - If any of the operands is a `string`, it concatenates the operands and returns a string.
@@ -118,7 +118,7 @@ When applied on two operand it does one of the following:
 21 + "hello"; // '21hello'
 ```
 
-Above in the example `"21" + 23` first operand is `"21"` (string data type) and another operand is a number (`23`). So the second rule applies here if any of the operand is a string than both the operands are concatenated converting the number (`23`) into sting with implicit type conversion.
+Above, in the example `"21" + 23`, first operand is `"21"` (string data type) and another operand is a number (`23`). So the second rule applies here i.e. if any of the operand is a string then both operands are concatenated, converting the number (`23`) into string with implicit type conversion.
 
 ### Increment/Decrement Operator
 
@@ -144,13 +144,13 @@ count++; // 10
 
 ```js
 let count = 0;
-alert(count++); // alert the value 0 and incremnt the value of count to 1 (use and increment)
-alert(++count); // incremnt the value of count to 1 and alert 1 (increment and use)
+alert(count++); // alert the value 0 and increment the value of count to 1 (use and increment)
+alert(++count); // increment the value of count to 1 and alert 1 (increment and use)
 ```
 
 #### Decrement (--)
 
-The increment operator can be used in two ways:
+The decrement operator can be used in two ways:
 
 - `--count` which means decrement and use.
 
@@ -159,11 +159,11 @@ let count = 10;
 --count; // 9
 ```
 
-- `count++` which means use and decrement.
+- `count--` which means use and decrement.
 
 ```js
 let count = 10;
-count++; // 10
+count--; // 10
 ```
 
 ```js
@@ -179,7 +179,7 @@ let num = (2, 3); // 3
 let sum = (2 + 4, 3 + 4); // 7
 ```
 
-The value of `num` in above example will be 3. Comma operator will evaluate all the value separated by comma and returns the last value.
+The value of `num` in the first example will be 3. Comma operator evaluates all the value separated by comma and returns the last value.
 
 ## Exercise:
 
@@ -209,6 +209,6 @@ The value of `num` in above example will be 3. Comma operator will evaluate all 
 - `3 * false`
 - `3 * ""`
 - `3 + ""`
-
+- `2 + 2 + "2"`
 [Operator Precedence Table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 [Expressions and operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
