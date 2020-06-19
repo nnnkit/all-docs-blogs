@@ -16,16 +16,16 @@ let sum = num1 + num2; // "2123"
 alert(sum);
 ```
 
-In above example JavaScript has converted the number value `21` in an string. After conversion both value become strings so the two values got concatinated. The value of sum is `"2123"`. This kind of conversion is call Implicit type conversion.
+In the above example JavaScript has converted the number value `21` to a string. After conversion, both values become strings. So, the two values got concatenated. The value of sum is `"2123"`. This kind of conversion is called Implicit type conversion.
 
-There are two kinds of type conversion:
+There are two kinds of type conversions:
 
 1. Explicit
 2. Implicit
 
 ### Explicit
 
-JavaScript provide special function like `String()`, `Number()`, `Boolean()` to convert one data type into another data type. For example I have a value `21` and I want to convert this value into `string` data type.
+JavaScript provide special function like `String()`, `Number()`, `Boolean()` to convert one data type into another data type. For example, I have a value `21` and I want to convert this value into `string` data type.
 
 ```js
 String(21); //"21"
@@ -45,7 +45,7 @@ You can also convert a non number data type into number using _unary_ `+` operat
 
 #### parseInt and parseFloat
 
-The `parseInt` and `parseFloat` functions return numbers from any strings that starts with numeric value. This is also an explicit type conversion. When the value can't be converted into number it eill return `NaN`.
+The `parseInt` and `parseFloat` functions return numbers from any string that starts with numeric value. This is also an explicit type conversion. When the value can't be converted into number, it will return `NaN`.
 
 ```js
 let length = "20m";
@@ -61,25 +61,25 @@ parseFloat("22.9km"); // 22.9
 
 ### Implicit (Automatic type conversion)
 
-Implicit type conversion refers to JavaScript engine's attempt to convert unexpected value type to expected value type. Some operator to get specific data type converts one data type into another is called Implicit type conversion. Also known as automatic type conversion.
+Implicit type conversion refers to JavaScript engine's attempt to convert unexpected value type to expected value type. Some operators, in order to get specific data type, converts one data type into another. This process is called Implicit type conversion. It is also known as automatic type conversion.
 
 > This kind of type conversion happens automatically.
 
-- In JavaScript, the `+` operator is used for both numeric addition and string concatenation. When you add `number` and `string` the number is converted to string and concatinated.
+- In JavaScript, the `+` operator is used for both numeric addition and string concatenation. When you add `number` and `string` the number is converted to string and concatenated.
 
 ```js
 21 + "22"; // "2122" (one value is string)
 "21" + 22; // "2122" (one value is string)
 ```
 
-- In JavaScript, the `-` operator is only used for substraction. So, when you use it with a string and a number the string is converted into number and the value is substracted.
+- In JavaScript, the `-` operator is only used for subtraction. So, when you use it with a string and a number the string is converted into number and the value is subtracted.
 
 ```js
 "21" - 10; // 11
 200 - "21"; // 179
 ```
 
-- In JavaScript, the `*` operator is only used to multiplying the numbers. When you use it with a number or string the string is converted into number and multiplied.
+- In JavaScript, the `*` operator is only used for multiplying the numbers. When you use it with a number or string the string is converted into number and multiplied.
 
 ```js
 "10" * 10; // 100
@@ -87,22 +87,22 @@ Implicit type conversion refers to JavaScript engine's attempt to convert unexpe
 ```
 
 ```
-string + number = concatination
-string - number = substraction
+string + number = concatenation
+string - number = subtraction
 string * number = multiplication
 ```
 
-You can see in `21 + "22"` the value `21` got converted in string. Now both the values are string so it will concatinate.
+You can see in `21 + "22"` the value `21` got converted in string. Now, both the values are string. So, it will concatenate.
 
 ### Truthy and Falsy Values
 
-All the values in JavaScript can be categorised into one of two kinds of values either `truthy` or `falsy` values.
+All the values in JavaScript can be categorised into one of the two kinds of values i.e. either `truthy` or `falsy` values.
 
 ```js
 Boolean(36); // true
 ```
 
-When you convert any value (like `36`) into boolean data type using `Boolean()` and it returns `true` as result that value (`36`) is said to a `truthy` value.
+When you convert any value (like `36`) into boolean data type using `Boolean()` and it returns `true` as result, that value (`36`) is said to be a `truthy` value.
 
 ```js
 Boolean(36); // true (36 is a truthy value)
@@ -116,7 +116,7 @@ Boolean({}); // true ({} is a truthy value)
 Boolean(null); // false
 ```
 
-Similarly when converting a value (`null`) into boolean using `Boolean()` and it returns `false` as result that value is considered to be `falsy` value. To keep things simple there are only six values that are falsy, every other values are truthy.
+Similarly, when converting a value (`null`) into boolean using `Boolean()` and it returns `false` as result, that value is considered to be `falsy` value. To keep things simple, there are only six values that are falsy, every other values are truthy.
 
 1. `false`
 2. `0`
@@ -126,20 +126,19 @@ Similarly when converting a value (`null`) into boolean using `Boolean()` and it
 6. `NaN`
 
 ```js
-Boolean(null); // flasy value
-Boolean(undefined); // flasy value
-Boolean(0); // flasy value
-Boolean(false); // flasy value
-Boolean(""); // flasy value
-Boolean(NaN); // flasy value
-Boolean(false); // flasy value
+Boolean(null); // falsy value
+Boolean(undefined); // falsy value
+Boolean(0); // falsy value
+Boolean(false); // falsy value
+Boolean(""); // falsy value
+Boolean(NaN); // falsy value
 ```
 
 :::tip Truthy values
 All the values other than six falsy values are truthy values.
 :::
 
-**NOTE**: `true` is a value, while "truthy" is a kind of value. `36`, `"Hello"` are truthy values.
+**NOTE**: `true` is a value, while "truthy" defines state of the value. For eg, `36`, `"Hello"` are truthy values.
 
 ## Exercise
 
@@ -157,9 +156,9 @@ Read the explanation below
 
 Explanation:
 
-`3 + '4'` in this code first value `3` is a Number data type and `'4'` is a String. Because both values are not same `implicit type conversion` will happen to bring both the value in the same data type. So `number` will be converted to `string` because `+` is use in bot concatination and addition and `3` will be converted to `"3"`. Now the value is `"3"` and `"4"` so it will be concatinated. The output will be `"34"`.
+`3 + '4'` In this code, first value `3` is a Number data type and the second value `'4'` is a String. Because both values are not same, `implicit type conversion` will happen to bring both values in the same data type. So `number` will be converted to `string` because `+` is use in both concatenation and addition. So, `3` will be converted to `"3"`. Now the value is `"3"` and `"4"` so it will be concatenated. The output will be `"34"`.
 
-Similarly write the explanation of how this conversion will happen. And what will be the output.
+Similarly, write the explanation of how this conversion will happen. And what will be the output.
 
 - `3 * "3"`
 
@@ -178,6 +177,14 @@ What will be the output of the following:
 7. `Boolean(1)`
 8. `Boolean(0)`
 9. `Boolean(-5)`
+10. `Number(true)`
+11. `Number(false)`
+12. `Number(null)`
+13. `Number("")`
+14. `Number(undefined)`
+15. `Number(NaN)`
+
+
 
 #### Converting string to number
 
@@ -186,6 +193,6 @@ let num = "6.76";
 let angle = "30 degree";
 ```
 
-- Convert the value of `num` into integer number and store in new variable called `intNum`.
-- Convert the value of `num` into decimal number and store in the new variable called `intFloat`
-- Take out the value of `30` from the angle variable and store in `angleInt`
+- Convert the value of `num` into integer number and store it in new variable called `intNum`.
+- Convert the value of `num` into decimal number and store it in the new variable called `intFloat`
+- Take out the value of `30` from the angle variable and store it in `angleInt`
