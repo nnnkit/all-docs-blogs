@@ -1,9 +1,12 @@
----
+
+
+
+> ---
 id: comparison-operators
 title: Comparison Operators
 ---
 
-Comparison operators are used for comparing two values. After comparing it returns boolean either `true` or `false`.
+Comparison operators are used for comparing two values. After comparing, it returns boolean i.e. either `true` or `false`.
 
 Some common comparison operators are:
 
@@ -11,7 +14,7 @@ Some common comparison operators are:
 - `<` less than
 - `>=` greater than or equal
 - `<=` less than or equal
-- `==` & `===` equality operater
+- `==` & `===` equality operator
 - `!=` Not equal
 
 ### Numaric comparison
@@ -28,19 +31,19 @@ Some common comparison operators are:
 
 ### String comparison
 
-In the example above, you can see we are comparing numaric values. In JavaScript, you can also compare strings. This comparision happens letter by letter in ascending order - where capital 'A' is the smallest value and small 'z' is the biggest - `AB.....Za....z`.
+In the examples above, you can see we are comparing numeric values. In JavaScript, you can also compare strings. This comparison happens letter by letter in ascending order - where capital 'A' is the smallest value and small 'z' is the largest value - `AB.....Za....z`.
 
 1. `A` is same as `A`
-2. `An` is same than `An`
+2. `An` is same as `An`
 3. `Ant` is greater than `And`
 4. `a` is same as `a`
-5. `as` is greater as `an`
+5. `as` is greater than `an`
 6. `p` is greater than `a`
 
 ```js
 "A" > "B"; // false
 "d" < "a"; // false
-"Hello" < "World"; // true
+"Hello" < "World"; // true.Comparison happens letter by letter
 "JavaScript" >= "Java"; // true
 ```
 
@@ -52,35 +55,35 @@ There are two ways to test equality `==` and `===`. We will try to understand th
 
 **Double equal operator allows implicit type conversion to happen.**
 
-When comparing values of different data types using `==`, JavaScript converts the value into number implicitly. Meaning when comparing two values of different data type it converts the value to bring them to a comman type.
+When comparing values of different data types using `==`, JavaScript converts the value into numbers implicitly. Meaning, when comparing two values of different data types, it converts the value to bring them to a common type.
 
 ```js
 "123" == 123;
 ```
 
 - We are comparing two different data types `string` and `number`
-- To bring them to common type JavaScript converts string into number. (`"123"` to `123`)
-- After conversion values are compared. `123 == 123`
-- Result is `true`
+- To bring them to a common data type, JavaScript converts string into a number. (`"123"` to `123`)
+- After conversion, values are compared. `123 == 123`
+- The result is `true`
 
 ```js
 "123" == 123; // true - string "123" becomes number 123
 "21" > 20; // true - string "21" becomes number 21
 true == 1; // true - boolean true gets converted to number 1.
-false == 1; // false - boolean false gets converted to number 0, 0 and 1 is not equal.
+false == 1; // false - boolean false gets converted to number 0, 0 and 1 are not equal.
 ```
 
 #### Triple Equality
 
-**Triple equal does not allows implicit type conversion to happen.**
+**Triple equal does not allow implicit type conversion to happen.**
 
-When comparing values of different types using `===` it compares the data type as well as value.
+When comparing values of different types using `===`, it compares the data type as well as the value.
 
 ```js
 "123" === 123;
 ```
 
-- We are comparing two different data types string and number
+- We are comparing two different data types i.e. string and number
 - `===` check the data type of both the values. They are not equal.
 - So, it will return `false`.
 
@@ -111,10 +114,10 @@ Team 1: `Number`, `Boolean`, `String` (`0`, `false`, `""`)
 Team 2: `null`, `undefined`
 Team 3: `NaN`
 
-Falsy values are divided into three teams. The implicit type conversion only happen within the team. Members of one team (`Team 1`) can't be converted into members of other teams (`Team 2` or `Team 3`). Members within team con be converted. This happens only for falsy values.
+Falsy values are divided into three teams. The implicit type of conversion only happens within the team. Members of one team (`Team 1`) can't be converted into members of other teams (`Team 2` or `Team 3`). Members within a team can be converted. This happens only for falsy values.
 
-- Comparision between members of same team using `==` will result to `true`
-- Comparision between members of differen team using `==` will result to `false`
+- Comparison between members of the same team using `==` will result in `true`
+- Comparison between members of the different team using `==` will result in `false`
 
 Within Team 1:
 
@@ -127,7 +130,7 @@ Within Team 1:
 Within Team 2:
 
 ```js
-null == undefined;
+null == undefined;//true
 ```
 
 `NaN` is not equal to anything, not even itself.
@@ -150,7 +153,7 @@ NaN == false; //false
 
 ---
 
-### Double and Tripal equal
+### Double and Triple equal
 
 ```js
 var a = 5,
@@ -159,7 +162,7 @@ var a = 5,
 var x = a;
 ```
 
-What will be the output of the code below on the basis of above code.
+What will be the output of the code below based on the above code?
 
 ```js
 a == c; // output
@@ -174,7 +177,7 @@ a >= c; // output
 a <= c; // output
 ```
 
-### Find th output of the given code below
+### Find the output of the given code below
 
 ```js
 true == 0; // output
