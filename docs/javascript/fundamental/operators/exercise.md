@@ -47,7 +47,7 @@ title: Exercise
 !true; //output
 ```
 
-### Double and Tripal equal
+### Double and Triple equal
 
 ```js
 var a = 5,
@@ -56,7 +56,7 @@ var a = 5,
 var x = a;
 ```
 
-### What will be the output of the code below on the basis of above code.
+### What will be the output of the code below on the basis of the above code.
 
 ```js
 a == c; // output
