@@ -1,18 +1,19 @@
+
 ---
 id: condition
 title: Condition
 ---
 
-Suppose we want to write a program that alert saying `Number is evan` for evan number and alert `Number is odd` for odd number.
+Suppose we want to write a program that alerts saying `Number is even` for an even number and alert `Number is odd` for an odd number.
 
 ```
-  if numer is even
-    alert "Number is evan"
+  if number is even
+    alert "Number is even"
   else
     alert "Number is odd"
 ```
 
-The above operation can be written as eiter the number is evan or odd. One of the two situation will be correct. In situation like this where the output depends on the specific condition we use conditions.
+The above operation can be written as either the number is even or odd. One of the two situations will be correct. In situations like this where the output depends on the specific condition, we use conditions.
 
 To implement condition in JavaScript we use `if` statement. Above logic can be converted into code like this:
 
@@ -32,7 +33,7 @@ if (condition) {
 ```js
 let num = 21;
 if (num % 2 === 0) {
-  alert("Number is evan!");
+  alert("Number is even!");
 } else {
   alert("Number is odd!");
 }
@@ -58,13 +59,13 @@ if (null) {
 
 ### Multiple if else condition
 
-There are times whe you have more than two consition like
+There are times when you have more than two conditions like
 
 - If the marks is greater than 80 return `awesome`.
 - If the marks is between 50 - 80 return `good`.
 - If the marks is less than 50 return `work hard`.
 
-In situation like this we can use multiple `if..else` statement together.
+In situations like this, we can use multiple `if..else` statements together.
 
 ```js
 let score = 43;
@@ -81,22 +82,22 @@ There can be multiple `else if` block and the last `else` block is optional.
 
 ### Conditional operator `?`
 
-The conditional operator is a shorte way of doing condition in javaScript.
+The conditional operator is a shorter way of doing condition in javaScript.
 
 ```js
 let num = 21;
 if (num % 2 === 0) {
-  alert("Number is evan!");
+  alert("Number is even!");
 } else {
   alert("Number is odd!");
 }
 ```
 
-The above code can be converted uto use conditional operator `?` to amke the code shorter.
+The above code can be converted to use the conditional operator `?` to make the code shorter.
 
 ```js
 let num = 21;
-num % 2 === 0 ? alert("Number is evan!") : alert("Number is odd!");
+num % 2 === 0 ? alert("Number is even!") : alert("Number is odd!");
 ```
 
 ```js
@@ -109,11 +110,11 @@ Syntax
 let number = condition ? value1 : value2;
 ```
 
-The `condition` is evaluated and if the output of condition is `true` or truthy `value1` will be is returned otherwise `value2`. The `?` operator has very low presedance so `%` and `===` is executed first.
+The `condition` is evaluated and if the output of condition is `true` or truthy, `value1` is returned otherwise `value2` is returned. The `?` operator has very low precedence so `%` and `===` is executed first.
 
 > In `?` conditional operator `value1` and `value2` is not optional.
 
-`?` is also called ternary operator because the operator `?` has threee operand.
+`?` is also called ternary operator because the operator `?` has three operands.
 
 #### Multiple `?`
 
@@ -131,9 +132,9 @@ let grade =
 
 #### `&&` instead of if or `?`
 
-Below two code examples are equivalent. You can use `&&` on the place of `if` or `?` statement.
+Below two code examples are equivalent. You can use `&&` in the place of `if` or `?` statement.
 
-- `&&` looks for first `falsey` value so `alert` will only execute if the fist expression is a truthy statement.
+- `&&` looks for first `falsy` value. So, `alert` will only execute if the first expression is a truthy statement.
 
 ```js
 let age = 21;
@@ -149,9 +150,9 @@ age > 18 && alert("You are an adult.");
 
 ### Switch Statement
 
-Switch statement can be used on the place of multiple `if..else` statement.
+Switch statements can be used in place of multiple `if..else` statement.
 
-For multiple `if..else` statement switch statement looks much ore cleaner.
+For multiple `if..else` statement switch statement looks much more cleaner.
 
 Example:
 
@@ -161,7 +162,7 @@ Example:
 - For value `4` return `FOUR`
 - For any other value return "NOT SUPPORTED"
 
-Writing above requirements with `if..else` will make it harder to read.
+Writing the above requirements with `if..else` will make it harder to read.
 
 ```js
 if (num === 1) {
@@ -201,9 +202,9 @@ switch (num) {
 
 How switch works:
 
-- `num` will be compared with all the values of `case` one after another.
-- If value of `num` and the value of `case` is equal the block of corresponding case will be executed until the nearest `break`. It compares `type` and `value` both just like `===`.
-- In case there no match the block of `default` gets executed.
+- `num` will be compared with all the values of `case`, one after another.
+- If the value of `num` and the value of `case` are equal, the block of the corresponding case will be executed until the nearest `break`. It compares `type` and `value` both, just like `===`.
+- In case there is no match, the block of `default` gets executed.
 
 ## Exercise
 
@@ -216,9 +217,9 @@ How switch works:
 - `if` the number is even print the message " number is even"
 - `if` the number is odd print the message "number is odd"
 
-2. Write a program to accept two numbers from user using `prompt` and alert the max value.
+2. Write a program to accept two numbers from the user using `prompt` and alert the max value.
 
-3. Convert the above code using `?` terniary operator
+3. Convert the above code using `?` ternary operator
 
 4. Write a program that asks the user for the house name and check the following conditions :
 
@@ -228,15 +229,15 @@ How switch works:
 
 #### Switch
 
-- Write a program that takes the number of the month (1-12) and alert number of days in the month.
-- Write a program that take the salery of the user using prompt and alert the in-hand amount. You will find out the in-hand amount by deducting the tax amoun from salery. Conditions are given below.
+- Write a program that takes the number of the month (1-12) and alert number of days in that month.
+- Write a program that takes the salary of the user using prompt and alert the in-hand amount. You will find out the in-hand amount by deducting the tax amount from salary. Conditions are given below.
   - `Salary <= 20000` tax is 10%
   - `Salary <= 20000` tax is 20%
   - `Salary > 50000` tax is 30%
 
 #### if..else vs switch
 
-Implement the condition give below using `if..else` and `switch` statement.
+Implement the conditions given below using `if..else` and `switch` statement.
 
 - `marks > 100` alert `"Marks can't be greater than 100"`
 - `marks > 80 && marks < 100` alert `"Grade A"`
@@ -259,11 +260,11 @@ var cerealsPrice = 149;
 - Define a new variable. Assign the price of vegetables to it.
 - Calculate the average price of these two commodities.
 
-#### Comparisoin
+#### Comparision
 
-Take two value using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
+Take two values using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
 
-- `alert` true or false base on the entered value.
+- `alert` true or false based on the entered value.
 - if the input value is anything like `true`, `null` or `undefined` alert saying `Enter a valid value`.
 
 Example:
