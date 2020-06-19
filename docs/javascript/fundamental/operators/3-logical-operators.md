@@ -9,7 +9,7 @@ There are three logical operators in JavaScript.
 2. AND `&&`
 3. NOT `!`
 
-Before getting to know about logical operators. Let us first understand the `falsy` and `truthy` values.
+Before getting to know about logical operators, let us first understand the `falsy` and `truthy` values.
 
 ### Falsy and Truthy
 
@@ -40,7 +40,7 @@ There are only 6 falsy values in JavaScript:
 
 #### Truthy Value
 
-When you convert a value into boolean using `Boolean()` and it returns `true` that value is said to be a truthy value.x=
+When you convert a value into boolean using `Boolean()` and it returns `true` that value is said to be a truthy value.
 
 ```js
 Boolean(21); // true
@@ -58,20 +58,20 @@ Boolean(2000); // true
 
 ### OR - || operator
 
-- Evaluates operands from left to right.
+- Evaluate operands from left to right.
 - OR operator returns the first `truthy` value it encounters.
 - Once it gets the truthy value it will not go ahead.
-- In case there is no truthy value the last falsy value will be returned.
+- In case there is no truthy value, the last falsy value will be returned.
 
 ```js
 undefined || null || 21 || "Hello"; // 21 - first trythy value
-undefined || null; // null - no truthy so last falsy value
+undefined || null; // null - no truthy value present. So, last falsy value `null` is returned 
 ```
 
 The explanation of the code above:
 
-- Is `undefined` a truthy value? NO - (go ahead to next value `null`)
-- Is `null` a truthy value? NO - (go ahead to next value `21`)
+- Is `undefined` a truthy value? NO - (go ahead to the next value `null`)
+- Is `null` a truthy value? NO - (go ahead to the next value `21`)
 - Is `21` a truthy value ? YES (the output will be `21`)
 
 **Output will be 21**
@@ -86,8 +86,8 @@ Examples:
 
 ### AND - &&
 
-- Evaluates operands from left to right.
-- OR operator returns the first `falsy` value it encounters.
+- Evaluate operands from left to right.
+- AND operator returns the first `falsy` value it encounters.
 - Once it gets the falsy value it will not go ahead.
 - In case there is no falsy value the last truthy value will be returned.
 
@@ -95,19 +95,19 @@ Examples:
 21 && 32 && "Hello" && null; // null - first falsy value
 ```
 
-- Is `21` a falsy value? NO - (go ahead to next value `32`)
-- Is `32` a falsy value? NO - (go ahead to next value `"Hello"`)
-- Is `"Hello"` a falsy value? NO - (go ahead to next value `null`)
-- Is `null` a falsy value? YES
+- Is `21` a falsy value? NO - (go ahead to the next value `32`)
+- Is `32` a falsy value? NO - (go ahead to the next value `"Hello"`)
+- Is `"Hello"` a falsy value? NO - (go ahead to the next value `null`)
+- Is `null` a falsy value? YES (the output will be `null`)
 
 **Output will be `null`**
 
 Examples:
 
 ```js
-21 || null; // null - first falsy value null
-0 || false || "AltCampus"; // false - first falsy value is false
-0 || "false" || null; // null - first falsy value
+21 && null; // null - first falsy value `null`
+0 && false && "AltCampus"; // 0 - first falsy value is `0`
+"0" && "false" && null; // null - first falsy value
 ```
 
 ### NOT - !
@@ -123,9 +123,9 @@ NOT operator does the following:
 !21; // false
 ```
 
-- `false` is a boolean will return the inverse i.e `true`
-- `0` is falsy so it will return the inverse i.e `true`
-- `21` is truthy so it will return the inverse i.e `false`
+- `false` is a boolean. So, it will return the inverse i.e `true`
+- `0` is falsy value. So, it will return the inverse i.e `true`
+- `21` is truthy value. So, it will return the inverse i.e `false`
 
 ## Exercise:
 
