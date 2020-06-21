@@ -274,3 +274,12 @@ Example:
 "21", "21"; // true
 "hello", -21; // false
 ```
+
+#### Weather app
+
+- Ask user to provide the condition of the weather outside by asking `What is the weather like outside?`
+- If user says `sunny` alert `Wear a T-shirt`
+- If `rainy` alert `Don't forget to take your raincoat`
+- If `hot` alert `Get a hanky`
+- If `freezing` alert `Get your sweeter on`
+- Anything else should alert `Not a valid input`

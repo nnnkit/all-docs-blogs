@@ -166,3 +166,15 @@ for (let num = 2; num <= 10; num = num + 2) {
   console.log(num);
 }
 ```
+
+## Exercise:
+
+---
+
+#### Loop basics
+
+- Using `console.log` log all the values from 1 to 10.
+- Using `console.log` log all the evan values from 1 to 10.
+- Using `console.log` log all the od values from 1 to 10.
+- Using `console.log` log all the prime numbers from 1 to 100.
+- Calculate the sum of all numbers from 1 to 10.
