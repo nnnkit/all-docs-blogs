@@ -7,11 +7,11 @@ title: Function
 
 Functions are the building block of JavaScript programming. The concept of wrapping a series of steps to perform a specific task or returns a value is very powerful. Once wrapped, you can call it numerous times. This helps us in structuring our app without repeating making the app more modular and efficient.
 
-Imagine you want to brush your teeth for that. To perform that task you need to perform these series of steps:
+Imagine you want to brush your teeth to do that you will have to perform these steps::
 
 1. Walk to the basin
 2. Pick up your tooth brush
-3. Take the lead off the toothpaste
+3. Take the lead off the toothpaste 
 4. Squieeze the toothpaste on to your brush
 5. Brush your teeth
 
@@ -29,11 +29,11 @@ function nameOfFunction() {
 nameOfFunction();
 ```
 
-- `function` is a keyword that inform JavaScript that you are defining a function.
-
-- `function body` will contain the series of steps.
+- `function` is a keyword that inform JavaScript that you want to store series of steps.
 
 - `functionName` is the name of the function. In the example given above, the function name could be `brushYourTeeth`.
+
+- `function body` will contain the series of steps.
 
 - `nameOfFunction()` this is how you execute a function. Executing a function is like as soon as someone says brush your teeth you go ahead and execute the series of steps we mentioned above.
 

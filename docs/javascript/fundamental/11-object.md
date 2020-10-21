@@ -5,6 +5,18 @@ title: Object
 
 ## Object
 
+Let't take and example to understand why we need object. There are 8 students in a class and we need to store their `name`, `age` and `marks`. To do that we need nedd to create three variable for each student to store their informations. So, for the total of 8 students we need to have `8 * 3` i.e 27 variables.
+
+```js
+
+```
+
+We learned about different types of values like number, string, boolean, null, undefined and object. Every type other than `object` is called a primitive type in JavaScript. Primitives contains only one value at a time. Objects are non-primitive type. Objects can store multiple values at a time. Used for storing complex data.
+
+
+
+
+
 - Objects are non-primitve data type.
 - Use `{}` to define an object also known as Object Literal
 - Objects are collection of `key` and `value` pair seperated by comma.

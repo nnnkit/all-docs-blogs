@@ -148,7 +148,7 @@ JavaScript is a case sensitive language. `true` and `True` are not same.
 
 ---
 
-#### Void Values (Empty)
+#### Empty Values
 
 To represent “nothing”, “empty” or "unknown value” we use special values i.e `null` or `undefined`. These are values that carry no information. It is used for the places where the operation doesn't produce meaningful value.
 
